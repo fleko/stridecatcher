@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/fleko/stridecatcher.svg?branch=main)](https://travis-ci.com/fleko/stridecatcher)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
