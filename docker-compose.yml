@@ -7,6 +7,11 @@ services:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
+  webdriver_chrome:
+    image: selenium/standalone-chrome-debug
+    ports:
+      - 5900:5900
+    # open vnc://localhost:5900 (password: secret)
   web:
     build: .
     volumes:
@@ -15,5 +20,7 @@ services:
       - "3000:3000"
     depends_on:
       - db
+      - webdriver_chrome
     environment:
       PG_PASSWORD: password
+      SELENIUM_REMOTE_URL: http://webdriver_chrome:4444/wd/hub
