@@ -37,6 +37,9 @@ gem 'rexml'
 # Production e-mail delivery
 gem "sendgrid-ruby", "~> 6.4"
 
+# Production error tracking
+gem 'honeybadger'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
